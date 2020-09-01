@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RSUD_TERNATE" Class="DCMedismartToolsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NCIPC\SQLServer2012;Initial Catalog=RSUD_TERNATE;User ID=sa" SettingsObjectName="Medismart_Tools.Properties.Settings" SettingsPropertyName="RSUD_TERNATEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PASIEN" Member="PASIENs">
+    <Type Name="PASIEN">
+      <Column Name="KD_PASIEN" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_KELURAHAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KD_PENDIDIKAN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="KD_PEKERJAAN" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="KD_PERUSAHAAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KD_AGAMA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGL_LAHIR" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GOL_DARAH" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="JENIS_KELAMIN" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="STATUS_HIDUP" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="STATUS_MARITA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ALAMAT" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="KOTA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TELEPON" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="KD_POS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="KD_ASURANSI" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="NO_ASURANSI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TANDA_PENGENAL" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="NO_PENGENAL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="KODE_LAMA" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="WNI" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA_KELUARGA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TEMPAT_LAHIR" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PEMEGANG_ASURANSI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_REG_LAMA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="KD_SUKU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KET_SIMPAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UNIT" Member="UNITs">
+    <Type Name="UNIT">
+      <Column Name="KD_UNIT" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_BAGIAN" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="KD_KELAS" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA_UNIT" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PARENT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AKTIF" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SPESIAL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_GROUP" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOKTER" Member="DOKTERs">
+    <Type Name="DOKTER">
+      <Column Name="KD_DOKTER" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NIP" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="JENIS_DOKTER" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="KD_CUSTOMER" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ACCOUNT" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CUSTOMER" Member="CUSTOMER1" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CONTACT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ALAMAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KOTA" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TELEPON1" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TELEPON2" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="KD_POS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="NEGARA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BEG_BAL" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CURRENTS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CR_LIMIT" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="FINANCE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TERM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KUNJUNGAN" Member="KUNJUNGANs">
+    <Type Name="KUNJUNGAN">
+      <Column Name="KD_PASIEN" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_UNIT" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_MASUK" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="URUT_MASUK" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_DOKTER" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="KD_RUJUKAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KD_CUSTOMER" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="JAM_MASUK" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TGL_KELUAR" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JAM_KELUAR" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KEADAAN_MASUK" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="KEADAAN_PASIEN" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CARA_PENERIMAAN" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ASAL_PASIEN" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="CARA_KELUAR" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="BARU" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SHIFT" Type="System.Decimal" DbType="Decimal(1,0) NOT NULL" CanBeNull="false" />
+      <Column Name="KARYAWAN" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="KONTROL" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SebabMati" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ANTRIAN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NO_SURAT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ALERGI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CATATAN" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="WAKTU_MATI" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="KET_MATI_OPR" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="STATUS_PERIKSA" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CAT_FISIK" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="KD_LOKET" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="TINDAKAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PERAWATAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS_PULANG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KETERANGAN_PLNG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CATATAN_REHAB" Type="System.String" DbType="VarChar(800)" CanBeNull="true" />
+      <Column Name="KD_TRIASE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="KD_KECELAKAAN" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="NO_SJP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="intAntrian" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ANAMNESIS" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KAMAR_INDUK" Member="KAMAR_INDUKs">
+    <Type Name="KAMAR_INDUK">
+      <Column Name="NO_KAMAR" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAMA_KAMAR" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="JUMLAH_BED" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DIGUNAKAN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NGINAP" Member="NGINAPs">
+    <Type Name="NGINAP">
+      <Column Name="KD_UNIT_KAMAR" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NO_KAMAR" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_PASIEN" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_UNIT" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_MASUK" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="URUT_MASUK" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_INAP" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JAM_INAP" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TGL_KELUAR" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JAM_KELUAR" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BED" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="KD_SPESIAL" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AKHIR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="URUT_NGINAP" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ALASAN_PINDAH" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PASIEN_INAP" Member="PASIEN_INAPs">
+    <Type Name="PASIEN_INAP">
+      <Column Name="KD_KASIR" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NO_TRANSAKSI" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_UNIT" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="NO_KAMAR" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="KD_SPESIAL" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRANSAKSI" Member="TRANSAKSIs">
+    <Type Name="TRANSAKSI">
+      <Column Name="KD_KASIR" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NO_TRANSAKSI" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KD_PASIEN" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="KD_UNIT" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TGL_TRANSAKSI" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="URUT_MASUK" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TGL_CO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CO_STATUS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ORDERLIST" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISPAY" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="APP" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="KD_USER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TAG" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="LUNAS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TGL_LUNAS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACC_DR" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="OrderMng" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Dilayani" Type="System.Data.Linq.Binary" DbType="VarBinary(10)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="verified" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT" Member="PAYMENTs">
+    <Type Name="PAYMENT">
+      <Column Name="KD_PAY" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JENIS_PAY" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="URAIAN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CREDIT_LIMIT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="KD_CUSTOMER" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS_AKTIF" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
